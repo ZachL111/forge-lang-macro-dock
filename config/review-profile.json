@@ -1,0 +1,29 @@
+{
+  "repo": "forge-lang-macro-dock",
+  "language": "Julia",
+  "category": "Compilers",
+  "case_count": 5,
+  "score_formula": "signal * 2 + slack + confidence - drag * 3",
+  "lane_thresholds": {
+    "ship": 140,
+    "watch": 105
+  },
+  "read_order": [
+    "README.md",
+    "fixtures/domain_review.csv",
+    "metadata/domain-review.json",
+    "examples/forge-lang-macro-walkthrough.md"
+  ],
+  "first_question": "Does IR pressure still dominate the review result?",
+  "second_question": "Is stack depth being penalized hard enough before diagnostic reach is trusted?",
+  "highest_case": {
+    "name": "edge",
+    "focus": "stack depth",
+    "score": 183
+  },
+  "lowest_case": {
+    "name": "recovery",
+    "focus": "diagnostic reach",
+    "score": 143
+  }
+}

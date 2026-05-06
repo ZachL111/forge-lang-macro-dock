@@ -1,0 +1,73 @@
+{
+  "repo": "forge-lang-macro-dock",
+  "language": "Julia",
+  "category": "Compilers",
+  "goal": "Create a Julia reference implementation for macro workflows, centered on storage recovery, log and snapshot fixtures, and replay consistency checks.",
+  "review_model": {
+    "terms": [
+      "IR pressure",
+      "lowering drift",
+      "stack depth",
+      "diagnostic reach"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "IR pressure",
+      "signal": 50,
+      "slack": 33,
+      "drag": 11,
+      "confidence": 51,
+      "score": 151,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "lowering drift",
+      "signal": 80,
+      "slack": 38,
+      "drag": 21,
+      "confidence": 46,
+      "score": 181,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "stack depth",
+      "signal": 55,
+      "slack": 27,
+      "drag": 8,
+      "confidence": 70,
+      "score": 183,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "diagnostic reach",
+      "signal": 55,
+      "slack": 27,
+      "drag": 15,
+      "confidence": 51,
+      "score": 143,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "IR pressure",
+      "signal": 78,
+      "slack": 31,
+      "drag": 26,
+      "confidence": 59,
+      "score": 168,
+      "lane": "ship"
+    }
+  ]
+}
