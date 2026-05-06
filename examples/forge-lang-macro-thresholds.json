@@ -1,0 +1,17 @@
+{
+  "repo": "forge-lang-macro-dock",
+  "thresholds": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 3,
+    "ship": 176,
+    "watch": 95
+  },
+  "terms": [
+    "IR pressure",
+    "lowering drift",
+    "stack depth",
+    "diagnostic reach"
+  ]
+}

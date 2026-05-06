@@ -63,3 +63,9 @@ julia --project=. tests/runtests.jl
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-forge-lang-macro-detail.ps1
 
 julia --project=. tests/domain_review.jl
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-forge-lang-macro-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-forge-lang-macro-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
